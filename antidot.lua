@@ -14,6 +14,9 @@ function()
     -- 13. Moonfire
     -- 14. Sunfire
     -- 15. Immolate
+    -- 16. Holy fire
+    -- 17. Stellar Flare
+
     function numToStr(num)
         local letter = {
             [0] = "",
@@ -66,8 +69,10 @@ function()
     local moonfire = simplehotValue(13)
     local sunfire = simplehotValue(14)
     local immolate = simplehotValue(15)
+    local holyFire = simplehotValue(16)
+    local stellar = simplehotValue(17)
 
-    local total = immolate + moonfire + sunfire + flameShock +  ignite + shadowWordPain + vampiricTouch + devouringPlague + (unstableAffliction + corruption + agony + soulRot) * shadowEmbrace * dreadTouch  * haunt
+    local total = stellar + holyFire + immolate + moonfire + sunfire + flameShock +  ignite + shadowWordPain + vampiricTouch + devouringPlague + (unstableAffliction + corruption + agony + soulRot) * shadowEmbrace * dreadTouch  * haunt
 
     if dbg then
         DevTool:AddData(immolate, "immolate")

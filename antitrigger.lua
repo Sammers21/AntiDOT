@@ -15,6 +15,7 @@ function(a, e, n, s)
     -- 13. Moonfire
     -- 14. Sunfire
     -- 15. Immolate
+    -- 16. Holy fire 
     
     -- DevTool:AddData(a, "a")
     -- DevTool:AddData(e, "e")
@@ -62,9 +63,6 @@ function(a, e, n, s)
         if spellV == nil then
             return 0
         end
-        if spellV.tooltip1 == nil or spellV.tooltip2 == nil then
-            return 0
-        end
         return spellV.tooltip1 / spellV.tooltip2
     end
     
@@ -91,7 +89,7 @@ function(a, e, n, s)
     if e == "TRIGGER" then    
         local unit = getUnit(s)
         if unit == nil then
-            return false
+            unit = "player"
         end
         local spells = rebuildToMap(s)
         local ignite = simplehotValue(spells["Ignite"], s)
